@@ -1,0 +1,32 @@
+.content{
+  display: flex;
+  justify-content: center;
+
+}
+.card{
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: azure;
+  width: 30%;
+  height: 20%;
+}
+.send{
+  display: flex;
+  justify-content: center;
+
+
+}
+
+input{
+  margin: 1em;
+  border-color: aqua;
+  border-radius: 2em;
+
+}
+
+p, span{
+  display: none;
+
+}

@@ -1,0 +1,25 @@
+<div class="content">
+  <div class="card">
+    <h1>Formularios</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input-group">
+    <input placeholder="Nombre" type="text" name="name" required id="name" [(ngModel)]="register.name"/>
+  </div>
+  <span>Mensajes de error</span>
+  <div class="input-group">
+    <input placeholder="Email" type="email" name="email" required id="email" [(ngModel)]="register.email"/>
+  </div>
+  <span>Mensajes de error</span>
+  <div class="input-group">
+    <input placeholder="Contraseña" type="password" name="password" required id="password" [(ngModel)]="register.password">
+  </div>
+  <span>Mensajes de error</span>
+  <br>
+  <div class="send">
+    <button [disabled]="myForm.invalid  " type="submit" class="btn btn-outline-success">Registrar</button>
+  </div>
+  <br>
+
+</form>
+  </div>
+</div>

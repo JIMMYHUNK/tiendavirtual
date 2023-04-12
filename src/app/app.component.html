@@ -1,35 +1,107 @@
-<!-- NgFor Objs-->
+
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<!--
+
+<h1>NgClass & NgStyle</h1>
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name"/>
+<hr class="line-error"
+  [ngClass]="{
+    'valid':nameInput4.valid,
+    'invalid':nameInput4.invalid
+  }"
+/>
+<p class="message-error" [class.invalid]="nameInput4.invalid">
+  El campo es requerido
+</p>
+
+<div class="styles">
+  <div>
+    <input type="number"[(ngModel)]="box.width"/>
+    <input type="number"[(ngModel)]="box.height"/>
+    <input type="color"[(ngModel)]="box.background"/>
+
+  </div>
+  <div [ngStyle]="{
+    'width.px':box.width,
+    'height.px':box.height,
+    'background-color':box.background,
+    'display.px':'block'
+  }"> </div>
+</div>
+
+
+
+<h1>Class & style</h1>
+<input type="text" required #nameInput2="ngModel"[(ngModel)]="person.name" />
+<p class="message-error" [class.invalid]="nameInput2.invalid" >El campo es requerido</p>
+
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel"[(ngModel)]="person.name" />
+<p [style.font-style]="nameInput3.invalid ? 'italic':'normal'">Texto texto texto</p>
+<div class="styles">
+    <div>
+      <input type="text"[(ngModel)]="widthImg" />
+    </div>
+    <div>
+      <img [style.width.px]="widthImg" [src]="person.avatar"/>
+    </div>
+
+</div>
+
+
+<h1>NgSwitch</h1>
+<input type="text" required [(ngModel)]="person.name"/>
+<div [ngSwitch]="person.name">
+
+  <p *ngSwitchCase="'jimmy'">
+    La persona es jimmy
+  </p>
+  <p *ngSwitchCase="'julian'">
+    La persona es julian
+  </p>
+  <p *ngSwitchCase="'lorena'">
+    La persona es lorena
+  </p>
+  <p *ngSwitchDefault>No hace math</p>
+
+</div>
+
+
 <h1>*ngFor Objs</h1>
-<div>
+<div class="products--grid">
   <div *ngFor="let product of products">
     <img [src]="product.image" alt="image">
-    <h2 ></h2>
+    <h2 >{{product.price}}</h2>
+    <p>{{product.name}}</p>
+    <p>{{product.category}}</p>
 
   </div>
 </div>
 
-<!-- NgFor-->
+
 <h1>*ngFor</h1>
 <input type="text" required [(ngModel)]="newName"/>
 <button (click)="addName()">Add name</button>
 <ul>
   <li *ngIf="names.length === 0">No hay nombres</li>
   <li *ngFor="let name of names; index as i">
-    {{i}}{{name}}
+    {{i}} {{name}}
     <button (click)="deleteName(i)">Delete</button>
   </li>
 </ul>
 
-<!-- NgIf-->
+
 <h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="person.name"/>
-<p *ngIf="person.name === 'julian'">Soy julian</p>
+
+
 <p *ngIf="person.name === 'jimmy' && person.age === 29; else elseBlock">Soy jimmy</p>
 <ng-template #elseBlock>
   <p>Bloque de else</p>
 </ng-template>
 
-<!-- Ng model-->
+
 <h1>NgModel</h1>
 <p>Nombre {{person.name}}</p>
 <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
@@ -37,7 +109,8 @@
 <p>Age: {{ageInput.valid}}</p>
 <input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age"/>
 <hr/>
-<!-- Manejo de eventos-->
+
+
 <h1>Eventos</h1>
 <button [disabled]="btnDisabled">Enviar</button>
 <button (click)="toggleButton()">Toggle Button</button>
@@ -50,16 +123,18 @@
 <p> Nombre:  {{person.name}}</p>
 <input type="text" [value] ="person.name" (keyup)="changeName($event)" />
 <hr/>
-<!-- Property Blinding: sirve para configurar propiedades de elementos html estados de los botones el value  -->
+
 <h1>Propiedades</h1>
 <button [disabled]="btnDisabled">Enviar</button>
 <input type="text" [value]="person.name" />
 <progress max="100" [value]="person.age"></progress>
 <img width="100" [src]="person.avatar"/>
 <hr/>
-<!-- String interpolation: funciona para renderizar contenido  -->
+
+
 <h1>Hola Mundo</h1>
 <h2>{{'Hola Mundo '.repeat(5)}}</h2>
 <p>3+3= {{3+3}}</p>
 <h3>Hola, soy {{name}} y tengo {{age}} años</h3>
 <img src={{img}} alt="image">
+ -->
