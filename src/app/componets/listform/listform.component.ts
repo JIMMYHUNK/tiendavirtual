@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./listform.component.scss']
 })
 export class ListformComponent {
+  img='';
+  imageDefault='./assets/no_disponible.png';
 
+
+  imgError(){
+    this.img=this.imageDefault;
+  }
 }
