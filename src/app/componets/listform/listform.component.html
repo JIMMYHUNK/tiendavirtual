@@ -1,9 +1,2 @@
-<p><input type="text" [(ngModel)]="img"></p>
-
-
-<img width="400" (error)="imgError()"[src]="img" alt="" *ngIf="img; else elseImg"/>
-
-<ng-template #elseImg>
-  <img [src]="imageDefault" width="200" alt=""/>
-</ng-template>
-
+<p><input type="text" [(ngModel)]="imgParent" /></p>
+<app-img (loaded)="onLoaded($event)" [img]="imgParent" ></app-img>

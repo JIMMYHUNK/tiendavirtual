@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './componets/home/home.component';
 import { ListformComponent } from './componets/listform/listform.component';
 import { NavbarComponent } from './componets/navbar/navbar.component';
+import { ImgComponent } from './componets/img/img.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { NavbarComponent } from './componets/navbar/navbar.component';
     HomeComponent,
     ListformComponent,
     NavbarComponent,
+    ImgComponent,
 
   ],
   imports: [
